@@ -5,6 +5,7 @@ import android.os.Message
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -33,8 +34,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BirthdayGreetingWithText(message: String) {
-    column{
+fun BirthdayGreetingWithText(message: String, from: String) {
+        Row{
         Text(text = message,fontSize = 36.sp)
         Text(text = from, fontSize = 24.sp)
     }
@@ -50,6 +51,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     BirthdayCardTheme {
-        Greeting("Happy Birthday Annie")
+        Greeting("Happy Birthday Annie -From Hugh")
     }
 }
